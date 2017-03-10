@@ -1,0 +1,11 @@
+`define instruction_outchar \
+casex(stage) \
+  8'h01: begin \   
+	 bus_vga_char=16'h0041; \
+	 bus_vga_pos=16'h0131; \
+  end \
+  8'h09: begin \    
+     processing_instruction=1'b0; \
+     resetStage=1'b1; \
+  end \
+endcase

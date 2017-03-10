@@ -1,0 +1,149 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : -18.320
+TNS   : -929.692
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -7.789
+TNS   : -2977.789
+
+Type  : Slow 1200mV 85C Model Setup 'clock_manager:U5|clock_1MHz'
+Slack : -5.988
+TNS   : -1247.141
+
+Type  : Slow 1200mV 85C Model Setup 'clock_manager:U5|clock_25Mhz_int'
+Slack : -0.949
+TNS   : -4.441
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : -1.839
+TNS   : -13.620
+
+Type  : Slow 1200mV 85C Model Hold 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : 0.389
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_manager:U5|clock_1MHz'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clock_manager:U5|clock_25Mhz_int'
+Slack : 0.431
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -2112.208
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_manager:U5|clock_1MHz'
+Slack : -1.285
+TNS   : -336.670
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : -1.285
+TNS   : -196.605
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock_manager:U5|clock_25Mhz_int'
+Slack : -1.285
+TNS   : -8.995
+
+Type  : Slow 1200mV 0C Model Setup 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : -16.413
+TNS   : -824.898
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -7.006
+TNS   : -2647.548
+
+Type  : Slow 1200mV 0C Model Setup 'clock_manager:U5|clock_1MHz'
+Slack : -5.381
+TNS   : -1125.753
+
+Type  : Slow 1200mV 0C Model Setup 'clock_manager:U5|clock_25Mhz_int'
+Slack : -0.745
+TNS   : -3.422
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -1.649
+TNS   : -11.653
+
+Type  : Slow 1200mV 0C Model Hold 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_manager:U5|clock_1MHz'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clock_manager:U5|clock_25Mhz_int'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -2079.384
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_manager:U5|clock_1MHz'
+Slack : -1.285
+TNS   : -336.670
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : -1.285
+TNS   : -196.605
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock_manager:U5|clock_25Mhz_int'
+Slack : -1.285
+TNS   : -8.995
+
+Type  : Fast 1200mV 0C Model Setup 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : -8.226
+TNS   : -377.618
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.457
+TNS   : -1085.466
+
+Type  : Fast 1200mV 0C Model Setup 'clock_manager:U5|clock_1MHz'
+Slack : -2.597
+TNS   : -530.706
+
+Type  : Fast 1200mV 0C Model Setup 'clock_manager:U5|clock_25Mhz_int'
+Slack : 0.052
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -1.030
+TNS   : -8.923
+
+Type  : Fast 1200mV 0C Model Hold 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : 0.130
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_manager:U5|clock_1MHz'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clock_manager:U5|clock_25Mhz_int'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -1082.122
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_manager:U5|clock_1MHz'
+Slack : -1.000
+TNS   : -262.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_manager:U5|lpm_dff1:U1|lpm_ff:lpm_ff_component|dffs[0]'
+Slack : -1.000
+TNS   : -153.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock_manager:U5|clock_25Mhz_int'
+Slack : -1.000
+TNS   : -7.000
+
+------------------------------------------------------------

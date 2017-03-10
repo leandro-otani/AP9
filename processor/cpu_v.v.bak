@@ -1,0 +1,378 @@
+module  cpu_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,bus_RAM_ADDRESS,wire_RW, bus_keyboard, videoflag, bus_vga_pos, bus_vga_char,data_debug);
+   input wire         wire_clock;
+   input wire         wire_reset;
+   input wire [15:0]  bus_RAM_DATA_IN;
+   output reg [15:0]  bus_RAM_DATA_OUT;
+   output reg [15:0]  bus_RAM_ADDRESS;
+   output reg         wire_RW;
+   input  wire [7:0]  bus_keyboard;
+   output reg        videoflag;
+   output reg [15:0] bus_vga_pos;
+   output reg [15:0] bus_vga_char;
+   output reg [15:0]  data_debug;
+
+   
+   reg               resetStage;   
+   reg [7:0]         stage;
+   reg               processing_instruction;
+   reg [15:0]        IR;
+   reg [15:0]        PC;
+	
+	
+   reg [15:0]   Rn [0:3] ;
+	//register general pruporse=========================
+	reg    [15:0]  r0;
+	reg    [15:0]  r1;
+	reg    [15:0]  r2;
+	reg    [15:0]  r3;
+	reg    [15:0]  r4;
+	reg    [15:0]  r5;
+	reg    [15:0]  r6;
+	reg    [15:0]  r7;
+	reg    [3:0]   selectRegisterForM3;
+	reg    [3:0]   selectRegisterForM4;
+	reg            M3clockOutput;
+	reg            M4clockOutput;
+	reg            M3clockInput;
+	reg            M4clockInput;
+	reg   [15:0]  M3output;
+	reg   [15:0]  M4output;
+	wire    [15:0]  M3;
+	wire    [15:0]  M4;
+	//end===============================================
+   
+	
+	
+	reg [15:0]        END;
+   reg [5:0]         endReg;
+   reg [15:0]        dataIn;
+   reg [15:0]        dataOut;
+   reg [31:0]        SP;
+   reg               wr;
+   reg               clock;
+   
+   
+   reg               EQual;
+   reg               Zero;
+   reg               Carry;
+   reg               GReater;
+   reg               LEsser;
+   reg               Overflow;
+   reg               Negative;
+   reg               DivbyZero;
+
+
+   reg               startedProcessing;
+   muxRn muxR3(selectRegisterForM3,r0,r1,r2,r3,r4,r5,r6,r7,M3);
+	muxRn muxR4(selectRegisterForM4,r0,r1,r2,r3,r4,r5,r6,r7,M4);
+   //muxForM3AndM4Output muxForM3Output(M3clockOutput,selectRegisterForM3,r0,r1,r2,r3,r4,r5,r6,r7,M3output);
+	//muxForM3AndM4Output muxForM4Output(M4clockOutput,selectRegisterForM4,r0,r1,r2,r3,r4,r5,r6,r7,M4output);
+	
+	//muxForM3AndM4Input muxForM3Input(M3clockInput,selectRegisterForM3,r0,r1,r2,r3,r4,r5,r6,r7,M3input);	
+	//muxForM3AndM4Input muxForM4Input(M4clockInput,selectRegisterForM4,r0,r1,r2,r3,r4,r5,r6,r7,M4input);
+
+//selectRegisterToWrite selRxToW(endReg,Rn1,dataIn,wr);
+//selectRegisterToRead  selRxToR(endReg,Rn,dataOut,wr);
+ integer x=5;
+
+   initial begin
+      stage=8'h00;
+      processing_instruction=1'b0;
+      wire_RW=1'b0;        
+      PC= 16'h0000;
+      EQual=1'b1;
+      Zero=1'b0;
+      Carry=1'b0;
+      GReater=1'b0;
+      LEsser=1'b0;     
+      Overflow=1'b0;
+      Negative=1'b0;
+      DivbyZero=1'b0;
+      startedProcessing=1'b0;     
+	   videoflag=1'b0;	
+		resetStage=1'b0;
+		
+		
+		data_debug=16'h0246;
+		selectRegisterForM3=3'b001;
+		M3=16'h0241;
+		Rn[1]=16'h0121;
+		Rn[x]=16'h0246;
+   end
+   always @ (posedge wire_clock & startedProcessing) begin
+      if(resetStage==1'b1 && stage==8'h01 ) begin
+         resetStage=1'b0;         
+      end
+      if(processing_instruction == 1'b0) begin
+         //`loadInstruction;====================
+         casex(stage) 
+           8'h01: begin 
+              bus_RAM_ADDRESS=PC;
+           end 
+           8'h02: begin 
+              processing_instruction=1'b1; 
+              IR=bus_RAM_DATA_IN; 
+              PC=PC+1'b1; 
+              resetStage=1'b1; 
+           end 			  
+         endcase
+         
+      end else begin 
+		   //debug with vga===============================
+			casex(stage) 
+				8'h40: begin 
+					videoflag=1'b1; 
+					selectRegisterForM3=3'b001;
+             end 				 
+				8'h41: begin 				 
+					bus_vga_pos= 16'h0205; 					
+               bus_vga_char= Rn[x];
+				end 
+				8'h42: begin 
+				     videoflag=1'b0; 				
+				end 
+			endcase	
+		   //end===================================	
+         casez(IR)   
+           16'b110000??????????: begin
+              //`instruction_load;==================================
+              casex(stage) 
+                8'h01: begin 
+                   bus_RAM_ADDRESS=PC;
+                end 
+                8'h02: begin 
+                   END=bus_RAM_DATA_IN; 
+                   PC=PC+1;     
+                end 
+                8'h03: begin 
+                   bus_RAM_ADDRESS=END;
+                end 
+                8'h04: begin 
+                   Rn[IR[9:7]]=bus_RAM_DATA_IN;
+                   processing_instruction=1'b0;
+                   resetStage=1'b1;
+                end 
+              endcase              
+           end
+           16'b110001??????????: begin
+              //`instruction_store;================================
+             
+              casex(stage) 
+                8'h01: begin 
+                   bus_RAM_ADDRESS=PC;
+                end 
+                8'h02: begin 
+                   END=bus_RAM_DATA_IN; 
+                   PC=PC+1;
+                end 
+                8'h03: begin 
+                   bus_RAM_ADDRESS=END;
+                end 
+                8'h04: begin 
+                   wire_RW=1'b1;
+                   bus_RAM_DATA_OUT=Rn[IR[9:7]];
+                end 
+                8'h05: begin 
+                   wire_RW=1'b0;
+                   processing_instruction=1'b0;
+                   resetStage=1'b1;
+                end 
+              endcase
+           end
+		     16'b111101??????????: begin
+              //`instruction_storei;=================================
+              
+              casex(stage) 
+                8'h01: begin 
+                   bus_RAM_ADDRESS=Rn[IR[9:7]];
+                end 
+                8'h02: begin 
+                   wire_RW=1'b1;
+                   bus_RAM_DATA_OUT=Rn[IR[6:4]];
+                end 
+                8'h03: begin 
+                   wire_RW=1'b0;
+                   processing_instruction=1'b0;
+                   resetStage=1'b1; 
+                end 
+              endcase
+           end
+           16'b111100??????????: begin
+              //`instruction_loadi;================================
+                            
+              casex(stage) 
+                8'h01: begin 
+                   bus_RAM_ADDRESS=Rn[IR[6:4]];
+                end 
+                8'h02: begin 
+                   Rn[IR[9:7]]=bus_RAM_DATA_IN;
+                   processing_instruction=1'b0;
+                   resetStage=1'b1; 
+                end 
+              endcase
+           end
+           16'b111000??????????: begin              
+              //`instruction_loadn;===============================              
+              casex(stage) 
+                8'h01: begin 
+                   bus_RAM_ADDRESS=PC; 
+                end 
+                8'h02: begin 
+                   Rn[IR[9:7]]=bus_RAM_DATA_IN; 
+                   PC=PC+1; 
+                   processing_instruction=1'b0; 
+                   resetStage=1'b1; 
+                end 
+              endcase
+           end
+           16'b110011??????????: begin
+              //`instruction_mov;=================================
+              
+              casex(stage) 
+                8'h01: begin 
+                   casez(IR[1:0]) 
+                     2'bX0: begin 
+                        Rn[IR[9:7]]= Rn[IR[6:4]]; 
+                     end 
+                     2'b01: begin 
+                        Rn[IR[9:7]]=SP; 
+                     end 
+                     2'b11: begin 
+                        SP=Rn[IR[9:7]]; 
+                     end 
+                   endcase 
+                end 
+                8'h02: begin 
+                   processing_instruction=1'b0; 
+                   resetStage=1'b1; 
+                end 
+              endcase              
+           end
+           16'b110010??????????: begin
+				//`instruction_outchar;==============================
+               //data_debug=2'h0041;
+					casex(stage)
+                 8'h01: begin 
+				       bus_vga_pos=Rn[IR[6:4]]; 
+                   bus_vga_char= Rn[IR[9:7]]; 
+                 end 
+                 8'h02: begin 
+                   videoflag=1'b1; 
+                 end 
+					  8'h03: begin 
+					     videoflag=1'b0; 
+					  end 
+                 8'h90: begin                    
+                   processing_instruction=1'b0; 
+                   resetStage=1'b1; 
+                 end 
+					endcase
+           end
+           16'b000010??????????: begin
+              //`instructions_jump;==============================
+            
+              
+              casex(stage) 
+                8'h01: begin 
+                   bus_RAM_ADDRESS=PC; 
+                end 
+                8'h02: begin 
+                   casex(IR[9:6]) 
+                     4'b0000: begin 
+                        PC=bus_RAM_DATA_IN-16'h0001; 
+                     end 
+                     4'b0001: begin 
+                        if(EQual==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b0010: begin 
+                        if(EQual==1'b0) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b0011: begin 
+                        if(Zero==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b0100: begin 
+                        if(Zero==1'b0) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end
+                     4'b0101: begin 
+                        if(Carry==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b0110: begin 
+                        if(Carry==1'b0) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b0111: begin 
+                        if(GReater==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b1000: begin 
+                        if(LEsser==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b1001: begin 
+                        if((GReater|EQual)==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b1010: begin 
+                        if((LEsser|EQual)==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b1011: begin 
+                        if(Overflow==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b1100: begin 
+                        if(Overflow==1'b0) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b1101: begin 
+                        if(Negative==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                     4'b1110: begin 
+                        if(DivbyZero==1'b1) begin 
+                           PC=bus_RAM_DATA_IN-16'h0001; 
+                        end 
+                     end 
+                   endcase 
+                end 
+					 8'h03: begin
+					    PC=PC+16'h0001;
+					 end
+                8'h04: begin 
+						 bus_RAM_ADDRESS=PC;                    
+                   processing_instruction=1'b0; 
+                   resetStage=1'b1; 
+                end 
+              endcase
+           end
+         endcase
+      end 
+   end // always @ (posedge wire_clock)
+   always @( negedge wire_clock) begin
+      startedProcessing=1'b1;
+      if(resetStage==1'b1) begin
+         stage=8'h01;    			
+      end
+      else begin
+         stage=stage+8'h01;    
+      end
+   end
+endmodule 

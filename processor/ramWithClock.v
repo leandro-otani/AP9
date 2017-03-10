@@ -1,0 +1,3 @@
+module ramWhithClock;
+
+endmodule

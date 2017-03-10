@@ -1,0 +1,99 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 296 288)
+	(text "cpu" (rect 5 0 22 12)(font "Arial" ))
+	(text "inst" (rect 8 208 25 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 24 24 38 36)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "reset" (rect 0 0 24 12)(font "Arial" ))
+		(text "reset" (rect 24 40 48 52)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "key[7..0]" (rect 0 0 44 12)(font "Arial" ))
+		(text "key[7..0]" (rect 24 72 68 84)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "RAM_DATA_IN[15..0]" (rect 0 0 107 12)(font "Arial" ))
+		(text "RAM_DATA_IN[15..0]" (rect 24 56 131 68)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 232 64)
+		(output)
+		(text "RW" (rect 0 0 18 12)(font "Arial" ))
+		(text "RW" (rect 192 56 210 68)(font "Arial" ))
+		(line (pt 232 64)(pt 216 64))
+	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "videoflag" (rect 0 0 46 12)(font "Arial" ))
+		(text "videoflag" (rect 168 72 214 84)(font "Arial" ))
+		(line (pt 232 80)(pt 216 80))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "vga_pos[15..0]" (rect 0 0 74 12)(font "Arial" ))
+		(text "vga_pos[15..0]" (rect 144 88 218 100)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 3))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "vga_char[15..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "vga_char[15..0]" (rect 144 104 221 116)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112)(line_width 3))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "RAM_ADDRESS[15..0]" (rect 0 0 114 12)(font "Arial" ))
+		(text "RAM_ADDRESS[15..0]" (rect 112 40 226 52)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "RAM_DATA_OUT[15..0]" (rect 0 0 118 12)(font "Arial" ))
+		(text "RAM_DATA_OUT[15..0]" (rect 112 24 230 36)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 208))
+	)
+)
