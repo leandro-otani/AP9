@@ -1,15 +1,18 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="AP9">
+		<CBX_INST_ENTRY INSTANCE_NAME="|kit|cpu_v:U1|alu_v:alu_v_dut|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_ocm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|POS_CONV:U2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_ecm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|VGA_MOD:U4|fifo0:inst7|scfifo:scfifo_component" CBX_FILE_NAME="scfifo_it21.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|VGA_MOD:U4|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8rc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|VGA_MOD:U4|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4rc1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|RAM:U2|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_rgr3.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|POS_CONV:U2|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_vim.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|VGA_MOD:U4|BUSMUX:inst13|lpm_mux:$00000" CBX_FILE_NAME="mux_arc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|VGA_MOD:U4|BUSMUX:inst14|lpm_mux:$00000" CBX_FILE_NAME="mux_rsc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|kit|cpu_v:U1|alu_v:alu_v_dut|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_lkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|kit|cpu_v:U1|alu_v:alu_v_dut|lpm_mult:Mult0" CBX_FILE_NAME="mult_7dt.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|POS_CONV:U2|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_vim.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|VGA_MOD:U4|BUSMUX:inst15|lpm_mux:$00000" CBX_FILE_NAME="mux_tsc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|lpm_rom0:U5|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_nd71.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|kit|vga:U4|VGA_MOD:U4|BUSMUX:inst14|lpm_mux:$00000" CBX_FILE_NAME="mux_rsc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

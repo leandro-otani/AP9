@@ -20,11 +20,12 @@ module ramWithClock_tb;
    wire [15:0] data_debug;   
    //end================================================================
 	
-	wire [15:0]  bus_vga_pos;
-	wire [15:0] bus_vga_char;
+   wire [15:0] bus_vga_pos;
+   wire [15:0] bus_vga_char;
    wire wire_videoflag;
-	
-   kit_v kit_v_mux(clock__50Mhz, wire_clock_50Mhz, wire_clock_25Mhz, wire_clock_1MHz, wire_clock_1KHz,bus_RAM_ADDRESS,bus_RAM_DATA_OUT, wire_RW,bus_RAM_DATA_IN,wire_videoflag, bus_vga_pos, bus_vga_char,data_debug);
+
+   wire [15:0] leds;
+   kit_v kit_v_mux(clock__50Mhz, wire_clock_50Mhz, wire_clock_25Mhz, wire_clock_1MHz, wire_clock_1KHz,bus_RAM_ADDRESS,bus_RAM_DATA_OUT, wire_RW,bus_RAM_DATA_IN,wire_videoflag, bus_vga_pos, bus_vga_char,data_debug,leds);
 	
    
    

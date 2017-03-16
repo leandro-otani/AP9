@@ -1,0 +1,181 @@
+module alu_v(wire_clock, m2, m3, m4,opCode,FR_shared_in,FR_shared_out,useCarry,dec);
+   input wire         wire_clock;
+   output reg [15:0]  m2;
+   input wire [15:0]  m3;
+   input wire [15:0]  m4;
+   input wire [5:0]   opCode;
+   input wire [15:0]  FR_shared_in;
+   input wire [15:0]  FR_shared_out;
+   input wire         useCarry;
+   input wire         dec;
+
+   reg [7:0]          stage=8'h01;
+   reg                resetStage=1'b0;
+   reg [31:0]         temp;
+   reg [31:0]         addInv;
+   
+   reg [15:0]         FR;
+   
+   assign FR[15:0] = FR_shared_in[15:0];
+   assign FR[15:0] = FR_shared_out[15:0];
+
+
+   always @ (posedge wire_clock) begin
+      if(resetStage) begin
+         resetStage=1'b0;         
+      end
+      casex(opCode)
+        6'b100000: begin
+           //`instructions_add_and_addc;=======================
+           casex(stage)
+             8'h01: begin 
+                if(useCarry==1b1) begin
+                   temp=32'h00000000+m3+m4+FR[11];                    
+                end    
+                else  begin
+                   temp=32'h00000000+m3+m4;                    
+                end
+             end
+             8'h02: begin
+                if(temp>32'h0000ffff) begin
+                   FR[11]=1'b1;                    
+                end
+                else begin
+                   FR[11]=1'b0;
+                end
+                m2=temp[15:0];
+                if(temp[15:0]==16'h0000) begin
+                   FR[12]=1'b1;
+                end
+                else begin
+                   FR[12]=1'b0;
+                end                   
+                resetStage=1'b1;
+             end
+           endcase
+        end 
+        6'b100001: begin
+           //`instructions_sub_and_subc;=======================
+           casex(stage)
+             8'h01: begin 
+                addInv=32'hffff0001+(~m4);                 
+              end
+              8'h02: begin 
+                 if(useCarry==1b1) begin
+                    temp=m3+addInv+FR[11]; 
+                 end    
+                 else  begin
+                    temp=m3+addInv;                    
+                 end
+              end
+              8'h03: begin
+                 if(temp>32'h0000ffff) begin
+                    FR[6]=1'b1;
+                    m2=16'h0000;                    
+                 end
+                 else begin
+                    FR[6]=1'b0;
+                    m2=temp[15:0];
+                 end
+                 if(temp[15:0]==16'h0000) begin
+                    FR[12]=1'b1;
+                 end
+                 else begin
+                    FR[12]=1'b0;
+                 end                   
+                 resetStage=1'b1;
+              end
+            endcase
+        end 
+        6'b100010: begin
+           //`instruction_mul;=================================
+           casex(stage)
+             8'h01: begin 
+                temp=m3*m4;
+             end
+             8'h02: begin
+                m2=temp[15:0];
+                if(temp>32'h0000ffff) begin
+                   FR[10]=1'b1;
+                end
+                else begin
+                   FR[10]=1'b0;
+                end
+                resetStage=1'b1;
+             end
+           endcase
+        end
+        6'b100011: begin
+           //`instruction_div;=================================
+           casex(stage)
+             8'h01: begin
+                if(m4==16'h0000) begin
+                   FR[9]=1'b1;                   
+                end
+                else begin
+                   m2=m3/m4;    
+                   FR[9]=1'b0;                 
+                end                  
+             end
+             8'h02: begin
+                resetStage=1'b1;
+             end
+           endcase
+        end 
+        6'b100101: begin
+           //`instruction_mod;=================================
+           casex(stage)
+             8'h01: begin
+                if(m4==16'h0000) begin
+                   FR[9]=1'b1;                   
+                end
+                else begin
+                   m2=m3%m4;
+                   FR[9]=1'b0;  
+                end                  
+             end
+             8'h02: begin
+                resetStage=1'b1;
+             end
+           endcase
+        end 
+        6'b100100: begin
+           //`instructions_inc_and_Dec;========================
+           casex(stage)
+             8'h01: begin
+                if(dec ==1'b0) begin
+                   m2=m3+16'h0001;
+                end
+                else begin
+                   m2=m3-16'h0001;
+                end
+                resetStage=1'b1;                
+             end
+           endcase
+        end 
+        6'b000101: begin
+           //`instructions_inc_and_Dec;========================
+           casex(stage)
+             8'h01: begin
+                if(m3 ==1'b0) begin
+                   m2=m3+16'h0001;
+                end
+                else begin
+                   m2=m3-16'h0001;
+                end
+                resetStage=1'b1;                
+             end
+           endcase
+        end                
+      endcase 
+      
+   end
+   always @( negedge wire_clock) begin	  
+      if(resetStage==1'b1) begin
+         stage=8'h01;    			
+      end
+      else begin
+		 stage=stage+8'h01;   
+      end
+   end
+endmodule

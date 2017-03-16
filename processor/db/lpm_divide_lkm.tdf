@@ -20,7 +20,7 @@
 FUNCTION sign_div_unsign_dnh (denominator[15..0], numerator[15..0])
 RETURNS ( quotient[15..0], remainder[15..0]);
 
---synthesis_resources = lut 147 
+--synthesis_resources = 
 SUBDESIGN lpm_divide_lkm
 ( 
 	denom[15..0]	:	input;

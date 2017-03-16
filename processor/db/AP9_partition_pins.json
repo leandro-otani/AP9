@@ -4,143 +4,415 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "VGA_VS",
+					"name" : "clock__50Mhz",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_HS",
+					"name" : "wire_clock_50Mhz",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_CLK",
+					"name" : "wire_clock_25Mhz",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[0]",
+					"name" : "wire_clock_1Mhz",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[1]",
+					"name" : "wire_clock_1KHz",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[2]",
+					"name" : "bus_RAM_ADDRESS[0]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[3]",
+					"name" : "bus_RAM_ADDRESS[1]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[4]",
+					"name" : "bus_RAM_ADDRESS[2]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[5]",
+					"name" : "bus_RAM_ADDRESS[3]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[6]",
+					"name" : "bus_RAM_ADDRESS[4]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[7]",
+					"name" : "bus_RAM_ADDRESS[5]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[8]",
+					"name" : "bus_RAM_ADDRESS[6]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_R[9]",
+					"name" : "bus_RAM_ADDRESS[7]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[0]",
+					"name" : "bus_RAM_ADDRESS[8]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[1]",
+					"name" : "bus_RAM_ADDRESS[9]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[2]",
+					"name" : "bus_RAM_ADDRESS[10]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[3]",
+					"name" : "bus_RAM_ADDRESS[11]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[4]",
+					"name" : "bus_RAM_ADDRESS[12]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[5]",
+					"name" : "bus_RAM_ADDRESS[13]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[6]",
+					"name" : "bus_RAM_ADDRESS[14]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[7]",
+					"name" : "bus_RAM_ADDRESS[15]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[8]",
+					"name" : "bus_RAM_DATA_OUT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_G[9]",
+					"name" : "bus_RAM_DATA_OUT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[0]",
+					"name" : "bus_RAM_DATA_OUT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[1]",
+					"name" : "bus_RAM_DATA_OUT[3]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[2]",
+					"name" : "bus_RAM_DATA_OUT[4]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[3]",
+					"name" : "bus_RAM_DATA_OUT[5]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[4]",
+					"name" : "bus_RAM_DATA_OUT[6]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[5]",
+					"name" : "bus_RAM_DATA_OUT[7]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[6]",
+					"name" : "bus_RAM_DATA_OUT[8]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[7]",
+					"name" : "bus_RAM_DATA_OUT[9]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[8]",
+					"name" : "bus_RAM_DATA_OUT[10]",
 					"strict" : false
 				},
 				{
-					"name" : "VGA_B[9]",
+					"name" : "bus_RAM_DATA_OUT[11]",
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "bus_RAM_DATA_OUT[12]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[0]",
+					"name" : "bus_RAM_DATA_OUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_OUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_OUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "wire_RW",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_RAM_DATA_IN[15]",
+					"strict" : false
+				},
+				{
+					"name" : "wire_videoflag",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_pos[15]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[4]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[5]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[6]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[7]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[8]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[9]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[10]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[11]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[12]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[13]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[14]",
+					"strict" : false
+				},
+				{
+					"name" : "bus_vga_char[15]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[7]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[8]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[9]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[10]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[11]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[12]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[13]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[14]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[15]",
 					"strict" : false
 				}
 			]

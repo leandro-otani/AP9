@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at cpu_v.v(332): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at control_unit_v.v(753): always construct contains both blocking and non-blocking assignments

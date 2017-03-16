@@ -5,23 +5,13 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/control_unit_v.v}
+vlog -vlog01compat -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/alu_v.v}
+vlog -vlog01compat -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/cpu_v.v}
 vlog -vlog01compat -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/clock_divider.v}
 vlog -vlog01compat -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/clock_gen.v}
 vlog -vlog01compat -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/kit_v.v}
-vlog -sv -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/cpu_v.sv}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/lpm_rom0.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/TEXT_DRAWER.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/vga_sync.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/ASCII_CONV.vhd}
 vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/RAM.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/POS_CONV.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/vga.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/lpm_dff0.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/lpm_dff2.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/color_bridge.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/lpm_ram_dq0.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/fifo0.vhd}
-vcom -93 -work work {/home/kite/workspace/AP9/ambientTest/lpm_ram_dq1.vhd}
 
 vlog -vlog01compat -work work +incdir+/home/kite/workspace/AP9/ambientTest {/home/kite/workspace/AP9/ambientTest/ramWithClock_tb.v}
 

@@ -21,6 +21,16 @@ ARCHITECTURE Behavior OF kit IS
             clock_1KHz                      : OUT	STD_LOGIC				
           );
    END COMPONENT;
+		
+	COMPONENT clock_divider
+      PORT( clock               : IN    STD_LOGIC;  
+            clock50Mhz			    		: OUT   STD_LOGIC;    
+            clock25Mhz		                : OUT   STD_LOGIC;								
+            clock1Mhz                      : OUT	STD_LOGIC;				
+            clock1Khz                      : OUT	STD_LOGIC;				
+				clock25hz                      : OUT	STD_LOGIC				
+          );
+   END COMPONENT;
 
    COMPONENT cpu
       PORT( clk                             : IN    STD_LOGIC;
@@ -87,6 +97,7 @@ ARCHITECTURE Behavior OF kit IS
    SIGNAL wire_clock_25Mhz                  : STD_LOGIC;
    SIGNAL wire_clock_1MHz                   : STD_LOGIC;
    SIGNAL wire_clock_1KHz                   : STD_LOGIC;
+	SIGNAL wire_clock_25hz                   : STD_LOGIC;
    SIGNAL bus_RAM_DATA_IN                   : STD_LOGIC_VECTOR(15 DOWNTO 0);
    SIGNAL bus_RAM_DATA_OUT                  : STD_LOGIC_VECTOR(15 DOWNTO 0);
    SIGNAL bus_RAM_ADDRESS                   : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -96,7 +107,8 @@ ARCHITECTURE Behavior OF kit IS
    SIGNAL bus_vga_pos                       : STD_LOGIC_VECTOR(15 DOWNTO 0);
    SIGNAL bus_vga_char                      : STD_LOGIC_VECTOR(15 DOWNTO 0);
    SIGNAL data_debug                        : STD_LOGIC_VECTOR(15 DOWNTO 0); 
- 
+   
+
 BEGIN
    wire_reset <= NOT(KEY(0));              
     U1: cpu_v PORT MAP (wire_clock_1MHz, wire_reset, bus_RAM_DATA_IN, bus_RAM_DATA_OUT, bus_RAM_ADDRESS, wire_RW, bus_keyboard, wire_videoflag, bus_vga_pos, bus_vga_char,data_debug, LEDR);    
@@ -104,6 +116,7 @@ BEGIN
     U2: RAM PORT MAP (bus_RAM_ADDRESS, wire_clock_50Mhz, bus_RAM_DATA_OUT, wire_RW, bus_RAM_DATA_IN);
     U3: ps2_keyboard PORT MAP (wire_clock_1KHz, wire_reset, PS2_DAT, PS2_CLK, bus_keyboard);
     U4: vga PORT MAP (wire_clock_50Mhz, wire_clock_25Mhz, wire_reset, wire_videoflag, bus_vga_pos, bus_vga_char, VGA_BLANK_N, VGA_CLK, VGA_VS, VGA_HS, VGA_R, VGA_G, VGA_B);    
-    U5: clock_manager PORT MAP (CLOCK_50, wire_clock_50Mhz, wire_clock_25Mhz, wire_clock_1MHz, wire_clock_1KHz);    
+    --U5: clock_manager PORT MAP (CLOCK_50, wire_clock_50Mhz, wire_clock_25Mhz, wire_clock_1MHz, wire_clock_1KHz);    
+	 U5: clock_divider PORT MAP (CLOCK_50, wire_clock_50Mhz, wire_clock_25Mhz, wire_clock_1MHz, wire_clock_1KHz,wire_clock_25hz);    
  
 END Behavior;
