@@ -102,6 +102,10 @@
 #define INPUT_CODE              96
 #define OUTPUT_CODE             97
 
+#define ADD32_CODE              106
+
+
+
 /* Definicoes dos op codes (binarios em strings) */
 
 /* Data Manipulation Instructions: */
@@ -128,6 +132,9 @@
 #define DIV             "100011"
 #define INC             "100100"
 #define LMOD            "100101"
+
+//DIOGO
+#define ADD32           "011101"
 
 
 /* Logic Instructions (All should begin with "01"): */
@@ -195,6 +202,9 @@
 #define OUTPUT_STR              "OUTPUT"
 
 /* ADD */
+///DIOGO
+#define ADD32_STR               "ADD32"
+
 #define ADD_STR                 "ADD"
 #define ADDC_STR                "ADDC"
 
@@ -215,7 +225,7 @@
 #define OR_STR                  "OR"
 #define XOR_STR                 "XOR"
 #define NOT_STR                 "NOT"
-    
+
 /* SHIFT */
 #define SHIFTL0_STR             "SHIFTL0"
 #define SHIFTL1_STR             "SHIFTL1"

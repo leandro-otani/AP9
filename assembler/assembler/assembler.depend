@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1489770395 source:c:\users\diogo.trevisan\documents\ap9\assembler\main.c
+	<stdio.h>
+	<stdlib.h>
+	"defs.h"
+	"parser.h"
+	"structs.h"
+	"montador.h"
+
+1489773123 c:\users\diogo.trevisan\documents\ap9\assembler\defs.h
+
+1489770395 c:\users\diogo.trevisan\documents\ap9\assembler\parser.h
+
+1489770395 c:\users\diogo.trevisan\documents\ap9\assembler\structs.h
+
+1489770395 c:\users\diogo.trevisan\documents\ap9\assembler\montador.h
+
+1489772853 source:c:\users\diogo.trevisan\documents\ap9\assembler\montador.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"defs.h"
+	"montador.h"
+	"parser.h"
+	"structs.h"
+
+1489770395 source:c:\users\diogo.trevisan\documents\ap9\assembler\parser.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"parser.h"
+	"structs.h"
+	"defs.h"
+
+1489770395 source:c:\users\diogo.trevisan\documents\ap9\assembler\structs.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"defs.h"
+	"montador.h"
+	"parser.h"
+	"structs.h"
+
