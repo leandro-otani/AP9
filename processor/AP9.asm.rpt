@@ -1,5 +1,5 @@
 Assembler report for AP9
-Fri Mar 17 16:13:15 2017
+Fri Mar 17 17:07:57 2017
 Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Mar 17 16:13:15 2017 ;
+; Assembler Status      ; Successful - Fri Mar 17 17:07:57 2017 ;
 ; Revision Name         ; AP9                                   ;
 ; Top-level Entity Name ; kit                                   ;
 ; Family                ; Cyclone IV E                          ;
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+------------------------------------------------------------------+
 ; Device         ; EP4CE115F29C7                                                    ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                       ;
-; Checksum       ; 0x00C3E083                                                       ;
+; Checksum       ; 0x00D7918B                                                       ;
 +----------------+------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+--------------------------------------------------------------+
 ; Device             ; EPCS64                                                       ;
 ; JTAG usercode      ; 0x00000000                                                   ;
-; Checksum           ; 0x708102DF                                                   ;
+; Checksum           ; 0x7020CC48                                                   ;
 ; Compression Ratio  ; 3                                                            ;
 +--------------------+--------------------------------------------------------------+
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Mar 17 16:13:05 2017
+    Info: Processing started: Fri Mar 17 17:07:46 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off AP9 -c AP9
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 506 megabytes
-    Info: Processing ended: Fri Mar 17 16:13:16 2017
+    Info: Peak virtual memory: 510 megabytes
+    Info: Processing ended: Fri Mar 17 17:07:57 2017
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:10
 

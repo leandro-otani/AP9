@@ -87,7 +87,7 @@ ImprimestrLoop:
 	loadi r4, r1		; aponta para a memoria no endereco r1 e busca seu conteudo em r4
 	cmp r4, r3			; compara o codigo do caractere buscado com o criterio de parada
 	jeq ImprimestrSai	; goto Final da rotina
-	add32 r4, r2, r4		; soma a cor (r2) no codigo do caractere em r4
+	add32 r4, r2, r4	; soma a cor (r2) no codigo do caractere em r4
 	outchar r4, r0		; imprime o caractere cujo codigo está em r4 na posicao r0 da tela
 	inc r0				; incrementa a posicao que o proximo caractere sera' escrito na tela
 	inc r1				; incrementa o ponteiro para a mensagem na memoria

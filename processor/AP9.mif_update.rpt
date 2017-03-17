@@ -1,5 +1,5 @@
 MIF/HEX Update report for AP9
-Fri Mar 17 16:03:15 2017
+Fri Mar 17 16:23:30 2017
 Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Fri Mar 17 16:03:15 2017 ;
+; MIF/HEX Update Status ; Successful - Fri Mar 17 16:23:30 2017 ;
 ; Revision Name         ; AP9                                   ;
 ; Top-level Entity Name ; kit                                   ;
 ; Family                ; Cyclone IV E                          ;
@@ -61,7 +61,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit MIF/HEX Update
     Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Mar 17 16:03:09 2017
+    Info: Processing started: Fri Mar 17 16:23:23 2017
 Info: Command: quartus_cdb AP9 -c AP9 --update_mif
 Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (32768) in the Memory Initialization File "C:/Users/diogo.trevisan/Documents/AP9/processor/cpuram.mif" -- setting initial value for remaining addresses to 0
 Info (39024): Processed the following Memory Initialization File(s)
@@ -71,8 +71,8 @@ Info (39024): Processed the following Memory Initialization File(s)
     Info (39025): Processed Memory Initialization File C:/Users/diogo.trevisan/Documents/AP9/processor/video_mem2.mif
 Info: Quartus II 32-bit MIF/HEX Update was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 289 megabytes
-    Info: Processing ended: Fri Mar 17 16:03:15 2017
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Fri Mar 17 16:23:30 2017
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 
 

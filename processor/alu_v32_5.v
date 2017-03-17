@@ -1,9 +1,9 @@
 module alu_v32_5(wire_clock,enable_alu, m2, m3, m4,opCode,FR_in,FR_out,useCarry,flagToShifthAndRot,dec);
    input  wire         wire_clock;
    input  wire         enable_alu;
-   output reg  [15:0]  m2;
-   input  wire [15:0]  m3;
-   input  wire [15:0]  m4;
+   output reg  [31:0]  m2; //from 16 to 32
+   input  wire [31:0]  m3; //from 16 to 32
+   input  wire [31:0]  m4; //from 16 to 32
    input  wire [5:0]   opCode;
    input  wire [15:0]  FR_in;
    output reg  [15:0]  FR_out=16'h0000;
@@ -13,7 +13,7 @@ module alu_v32_5(wire_clock,enable_alu, m2, m3, m4,opCode,FR_in,FR_out,useCarry,
    
    reg [7:0]          stage=8'h00;
    reg                resetStage=1'b1;
-   reg [31:0]         temp;
+   reg [63:0]         temp; //from 31 to 63
    reg [31:0]         addInv;
    
    reg [15:0]         FR;
@@ -45,37 +45,7 @@ module alu_v32_5(wire_clock,enable_alu, m2, m3, m4,opCode,FR_in,FR_out,useCarry,
                         resetStage=1'b1;                   
                      end
               endcase
-		   end	
-			6'b011101: begin
-			  //`ADD32;=======================
-			  casex(stage)
-				8'h01: begin 
-                   if(useCarry==1'b1) begin
-                      temp=32'h00000000+m3+m4+FR_in[11];                    
-                   end    
-                   else  begin
-                      temp=32'h00000000+m3+m4;                    
-                   end
-                end
-                8'h02: begin
-                   if(temp>32'h0000ffff) begin
-                      FR_out[11]=1'b1;                    
-                   end
-                   else begin
-                      FR_out[11]=1'b0;
-                   end
-                   m2=temp[15:0];
-                   if(temp[15:0]==16'h0000) begin
-                      FR_out[12]=1'b1;
-                   end
-                   else begin
-                      FR_out[12]=1'b0;
-                   end                   
-                   resetStage=1'b1;                       
-                end
-              endcase
-           end 
-			
+		   end				
 		   6'b100000: begin
 			  //`instructions_add_and_addc;=======================
 			  casex(stage)
@@ -360,7 +330,37 @@ module alu_v32_5(wire_clock,enable_alu, m2, m3, m4,opCode,FR_in,FR_out,useCarry,
                 end
               endcase
            end
-         endcase       
+			  6'b011101: begin
+			  //`ADD32;=======================
+			  casex(stage)
+				8'h01: begin 
+                   if(useCarry==1'b1) begin
+                      temp=32'h00000000+m3+m4+FR_in[11];                    
+                   end    
+                   else  begin
+                      temp=32'h00000000+m3+m4;                    
+                   end
+                end
+                8'h02: begin
+                   if(temp>32'h0000ffff) begin
+                      FR_out[11]=1'b1;                    
+                   end
+                   else begin
+                      FR_out[11]=1'b0;
+                   end
+                   m2=temp[15:0];
+                   if(temp[15:0]==16'h0000) begin
+                      FR_out[12]=1'b1;
+                   end
+                   else begin
+                      FR_out[12]=1'b0;
+                   end                   
+                   resetStage=1'b1;                       
+                end
+              endcase
+           end 
+			
+			endcase       
 	  end
    end
    always @( negedge wire_clock) begin

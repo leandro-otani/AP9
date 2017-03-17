@@ -16,9 +16,9 @@ module  control_unit_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,
    output reg         useCarry;
    output reg [2:0]   flagToShifthAndRot;
    output reg         useDec;
-   input  wire [15:0] m2;  
-   output reg [15:0]  m3;  
-   output reg [15:0]  m4;  
+   input  wire [31:0] m2; //from 16 to 32
+   output reg [31:0]  m3; //from 16 to 32
+   output reg [31:0]  m4; //from 16 to 32 
    output reg [15:0]  data_debug;
    output [15:0]      led;
 
@@ -30,7 +30,7 @@ module  control_unit_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,
    reg [15:0]         IR;
    reg [15:0]         PC;
    
-   reg [15:0]         Rn [0:7];
+   reg [31:0]         Rn [0:7]; //from 16 to 32
    reg [15:0]         END;
    reg [15:0]         SP=16'h7ffc;
    
@@ -300,24 +300,6 @@ module  control_unit_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,
                     end
                   endcase
               end
-				  16'b011101??????????: begin
-                 //`instructions_add32_and_addc;=======================
-                 casex(stage)
-                   8'h01: begin
-                      m3=Rn[IR[6:4]];
-                      m4=Rn[IR[3:1]];
-                      enable_alu=1'b1;
-                      useCarry=IR[0];
-                      opcode=IR[15:10];
-                   end
-                   8'h06: begin
-                      Rn[IR[9:7]]=m2;
-                      enable_alu=1'b0;
-                      processing_instruction=1'b0;
-                      resetStage=1'b1;
-                   end
-                  endcase
-              end 
               16'b100000??????????: begin
                  //`instructions_add_and_addc;=======================
                  casex(stage)
@@ -762,7 +744,26 @@ module  control_unit_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,
                    end 
                  endcase
               end
-            endcase 
+				  16'b011101??????????: begin
+                 //`instructions_add32_and_addc;=======================
+                 casex(stage)
+                   8'h01: begin
+                      m3=Rn[IR[6:4]];
+                      m4=Rn[IR[3:1]];
+                      enable_alu=1'b1;
+                      useCarry=IR[0];
+                      opcode=IR[15:10];
+                   end
+                   8'h06: begin
+                      Rn[IR[9:7]]=m2;
+                      enable_alu=1'b0;
+                      processing_instruction=1'b0;
+                      resetStage=1'b1;
+                   end
+                  endcase
+              end 
+
+			endcase 
             
          end 
       end
