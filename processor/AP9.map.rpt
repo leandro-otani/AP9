@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AP9
-Fri Mar 17 15:31:16 2017
+Fri Mar 17 16:12:20 2017
 Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
@@ -76,13 +76,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 17 15:31:15 2017         ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 17 16:12:20 2017         ;
 ; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; AP9                                           ;
 ; Top-level Entity Name              ; kit                                           ;
 ; Family                             ; Cyclone IV E                                  ;
-; Total logic elements               ; 3,282                                         ;
-;     Total combinational functions  ; 3,045                                         ;
+; Total logic elements               ; 3,375                                         ;
+;     Total combinational functions  ; 3,138                                         ;
 ;     Dedicated logic registers      ; 710                                           ;
 ; Total registers                    ; 710                                           ;
 ; Total pins                         ; 57                                            ;
@@ -189,102 +189,102 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                            ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+
-; alu_v32_5.v                      ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Desktop/processor/alu_v32_5.v                   ;
-; cpu_v32_5.v                      ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Desktop/processor/cpu_v32_5.v                   ;
-; control_unit_v.v                 ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Desktop/processor/control_unit_v.v              ;
-; clock_divider.v                  ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Desktop/processor/clock_divider.v               ;
-; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Users/diogo.trevisan/Desktop/processor/lpm_rom0.vhd                  ;
-; TEXT_DRAWER.vhd                  ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Desktop/processor/TEXT_DRAWER.vhd               ;
-; VGA_MOD.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/diogo.trevisan/Desktop/processor/VGA_MOD.bdf                   ;
-; video_mem2.mif                   ; yes             ; User Memory Initialization File          ; C:/Users/diogo.trevisan/Desktop/processor/video_mem2.mif                ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Desktop/processor/vga_sync.vhd                  ;
-; ASCII_CONV.vhd                   ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Desktop/processor/ASCII_CONV.vhd                ;
-; RAM.vhd                          ; yes             ; User Wizard-Generated File               ; C:/Users/diogo.trevisan/Desktop/processor/RAM.vhd                       ;
-; cpuram.mif                       ; yes             ; User Memory Initialization File          ; C:/Users/diogo.trevisan/Desktop/processor/cpuram.mif                    ;
-; POS_CONV.vhd                     ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Desktop/processor/POS_CONV.vhd                  ;
-; kit.vhd                          ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Desktop/processor/kit.vhd                       ;
-; ps2_keyboard.vhd                 ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Desktop/processor/ps2_keyboard.vhd              ;
-; vga.vhd                          ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Desktop/processor/vga.vhd                       ;
-; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altsyncram.tdf        ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/stratix_ram_block.inc ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.inc           ;
-; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_decode.inc        ;
-; aglobal111.inc                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/aglobal111.inc        ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_rdenreg.inc         ;
-; altrom.inc                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altrom.inc            ;
-; altram.inc                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altram.inc            ;
-; altdpram.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altdpram.inc          ;
-; db/altsyncram_rgr3.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/altsyncram_rgr3.tdf        ;
-; db/decode_rsa.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/decode_rsa.tdf             ;
-; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/decode_k8a.tdf             ;
-; db/mux_qob.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/mux_qob.tdf                ;
-; keyboard.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/diogo.trevisan/Desktop/processor/keyboard.vhd                  ;
-; dec_keyboard.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/diogo.trevisan/Desktop/processor/dec_keyboard.vhd              ;
-; video_filter.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/diogo.trevisan/Desktop/processor/video_filter.bdf              ;
-; lpm_dff0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Desktop/processor/lpm_dff0.vhd                  ;
-; lpm_ff.tdf                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_ff.tdf            ;
-; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_constant.inc      ;
-; lpm_dff2.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Desktop/processor/lpm_dff2.vhd                  ;
-; color_bridge.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/diogo.trevisan/Desktop/processor/color_bridge.vhd              ;
-; busmux.tdf                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/busmux.tdf            ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.tdf           ;
-; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/muxlut.inc            ;
-; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/bypassff.inc          ;
-; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altshift.inc          ;
-; db/mux_arc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/mux_arc.tdf                ;
-; lpm_ram_dq0.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Desktop/processor/lpm_ram_dq0.vhd               ;
-; db/altsyncram_8rc1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/altsyncram_8rc1.tdf        ;
-; video_mem1.mif                   ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/diogo.trevisan/Desktop/processor/video_mem1.mif                ;
-; db/mux_7nb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/mux_7nb.tdf                ;
-; demux.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/diogo.trevisan/Desktop/processor/demux.bdf                     ;
-; fifo0.vhd                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Desktop/processor/fifo0.vhd                     ;
-; scfifo.tdf                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/scfifo.tdf            ;
-; a_regfifo.inc                    ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_regfifo.inc         ;
-; a_dpfifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_dpfifo.inc          ;
-; a_i2fifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_i2fifo.inc          ;
-; a_fffifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_fffifo.inc          ;
-; a_f2fifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_f2fifo.inc          ;
-; db/scfifo_it21.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/scfifo_it21.tdf            ;
-; db/a_dpfifo_p331.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/a_dpfifo_p331.tdf          ;
-; db/altsyncram_58e1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/altsyncram_58e1.tdf        ;
-; db/cmpr_0u8.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/cmpr_0u8.tdf               ;
-; db/cntr_dpb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/cntr_dpb.tdf               ;
-; db/cntr_qp7.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/cntr_qp7.tdf               ;
-; db/cntr_epb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/cntr_epb.tdf               ;
-; db/mux_tsc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/mux_tsc.tdf                ;
-; lpm_ram_dq1.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Desktop/processor/lpm_ram_dq1.vhd               ;
-; db/altsyncram_4rc1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/altsyncram_4rc1.tdf        ;
-; db/decode_jsa.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/decode_jsa.tdf             ;
-; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/decode_c8a.tdf             ;
-; db/mux_vmb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/mux_vmb.tdf                ;
-; db/mux_rsc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/mux_rsc.tdf                ;
-; db/altsyncram_nd71.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/altsyncram_nd71.tdf        ;
-; charmap.mif                      ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/diogo.trevisan/Desktop/processor/charmap.mif                   ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_divide.tdf        ;
-; abs_divider.inc                  ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/abs_divider.inc       ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sign_div_unsign.inc   ;
-; db/lpm_divide_ocm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/lpm_divide_ocm.tdf         ;
-; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/sign_div_unsign_dnh.tdf    ;
-; db/alt_u_div_eaf.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/alt_u_div_eaf.tdf          ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/add_sub_7pc.tdf            ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/add_sub_8pc.tdf            ;
-; db/lpm_divide_lkm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/lpm_divide_lkm.tdf         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mult.tdf          ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_add_sub.inc       ;
-; multcore.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/multcore.inc          ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/mult_7dt.tdf               ;
-; db/lpm_divide_ecm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/lpm_divide_ecm.tdf         ;
-; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/sign_div_unsign_3nh.tdf    ;
-; db/alt_u_div_q9f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/alt_u_div_q9f.tdf          ;
-; db/lpm_divide_vim.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/lpm_divide_vim.tdf         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/sign_div_unsign_nlh.tdf    ;
-; db/alt_u_div_27f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Desktop/processor/db/alt_u_div_27f.tdf          ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                               ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------+
+; alu_v32_5.v                      ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Documents/AP9/processor/alu_v32_5.v                ;
+; cpu_v32_5.v                      ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Documents/AP9/processor/cpu_v32_5.v                ;
+; control_unit_v.v                 ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Documents/AP9/processor/control_unit_v.v           ;
+; clock_divider.v                  ; yes             ; User Verilog HDL File                    ; C:/Users/diogo.trevisan/Documents/AP9/processor/clock_divider.v            ;
+; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_rom0.vhd               ;
+; TEXT_DRAWER.vhd                  ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Documents/AP9/processor/TEXT_DRAWER.vhd            ;
+; VGA_MOD.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/diogo.trevisan/Documents/AP9/processor/VGA_MOD.bdf                ;
+; video_mem2.mif                   ; yes             ; User Memory Initialization File          ; C:/Users/diogo.trevisan/Documents/AP9/processor/video_mem2.mif             ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Documents/AP9/processor/vga_sync.vhd               ;
+; ASCII_CONV.vhd                   ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Documents/AP9/processor/ASCII_CONV.vhd             ;
+; RAM.vhd                          ; yes             ; User Wizard-Generated File               ; C:/Users/diogo.trevisan/Documents/AP9/processor/RAM.vhd                    ;
+; cpuram.mif                       ; yes             ; User Memory Initialization File          ; C:/Users/diogo.trevisan/Documents/AP9/processor/cpuram.mif                 ;
+; POS_CONV.vhd                     ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Documents/AP9/processor/POS_CONV.vhd               ;
+; kit.vhd                          ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Documents/AP9/processor/kit.vhd                    ;
+; ps2_keyboard.vhd                 ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Documents/AP9/processor/ps2_keyboard.vhd           ;
+; vga.vhd                          ; yes             ; User VHDL File                           ; C:/Users/diogo.trevisan/Documents/AP9/processor/vga.vhd                    ;
+; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altsyncram.tdf           ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/stratix_ram_block.inc    ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.inc              ;
+; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_decode.inc           ;
+; aglobal111.inc                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/aglobal111.inc           ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_rdenreg.inc            ;
+; altrom.inc                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altrom.inc               ;
+; altram.inc                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altram.inc               ;
+; altdpram.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altdpram.inc             ;
+; db/altsyncram_rgr3.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/altsyncram_rgr3.tdf     ;
+; db/decode_rsa.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/decode_rsa.tdf          ;
+; db/decode_k8a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/decode_k8a.tdf          ;
+; db/mux_qob.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/mux_qob.tdf             ;
+; keyboard.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/diogo.trevisan/Documents/AP9/processor/keyboard.vhd               ;
+; dec_keyboard.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/diogo.trevisan/Documents/AP9/processor/dec_keyboard.vhd           ;
+; video_filter.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/diogo.trevisan/Documents/AP9/processor/video_filter.bdf           ;
+; lpm_dff0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_dff0.vhd               ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_ff.tdf               ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_constant.inc         ;
+; lpm_dff2.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_dff2.vhd               ;
+; color_bridge.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/diogo.trevisan/Documents/AP9/processor/color_bridge.vhd           ;
+; busmux.tdf                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/busmux.tdf               ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mux.tdf              ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/muxlut.inc               ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/bypassff.inc             ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/altshift.inc             ;
+; db/mux_arc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/mux_arc.tdf             ;
+; lpm_ram_dq0.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_ram_dq0.vhd            ;
+; db/altsyncram_8rc1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/altsyncram_8rc1.tdf     ;
+; video_mem1.mif                   ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/diogo.trevisan/Documents/AP9/processor/video_mem1.mif             ;
+; db/mux_7nb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/mux_7nb.tdf             ;
+; demux.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/diogo.trevisan/Documents/AP9/processor/demux.bdf                  ;
+; fifo0.vhd                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Documents/AP9/processor/fifo0.vhd                  ;
+; scfifo.tdf                       ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/scfifo.tdf               ;
+; a_regfifo.inc                    ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_regfifo.inc            ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_dpfifo.inc             ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_i2fifo.inc             ;
+; a_fffifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_fffifo.inc             ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/a_f2fifo.inc             ;
+; db/scfifo_it21.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/scfifo_it21.tdf         ;
+; db/a_dpfifo_p331.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/a_dpfifo_p331.tdf       ;
+; db/altsyncram_58e1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/altsyncram_58e1.tdf     ;
+; db/cmpr_0u8.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/cmpr_0u8.tdf            ;
+; db/cntr_dpb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/cntr_dpb.tdf            ;
+; db/cntr_qp7.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/cntr_qp7.tdf            ;
+; db/cntr_epb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/cntr_epb.tdf            ;
+; db/mux_tsc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/mux_tsc.tdf             ;
+; lpm_ram_dq1.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_ram_dq1.vhd            ;
+; db/altsyncram_4rc1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/altsyncram_4rc1.tdf     ;
+; db/decode_jsa.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/decode_jsa.tdf          ;
+; db/decode_c8a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/decode_c8a.tdf          ;
+; db/mux_vmb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/mux_vmb.tdf             ;
+; db/mux_rsc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/mux_rsc.tdf             ;
+; db/altsyncram_nd71.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/altsyncram_nd71.tdf     ;
+; charmap.mif                      ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/diogo.trevisan/Documents/AP9/processor/charmap.mif                ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_divide.tdf           ;
+; abs_divider.inc                  ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/abs_divider.inc          ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/sign_div_unsign.inc      ;
+; db/lpm_divide_ocm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/lpm_divide_ocm.tdf      ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/sign_div_unsign_dnh.tdf ;
+; db/alt_u_div_eaf.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/alt_u_div_eaf.tdf       ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/add_sub_7pc.tdf         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/add_sub_8pc.tdf         ;
+; db/lpm_divide_lkm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/lpm_divide_lkm.tdf      ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_mult.tdf             ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/lpm_add_sub.inc          ;
+; multcore.inc                     ; yes             ; Megafunction                             ; c:/altera/11.1sp2/quartus/libraries/megafunctions/multcore.inc             ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/mult_7dt.tdf            ;
+; db/lpm_divide_ecm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/lpm_divide_ecm.tdf      ;
+; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/sign_div_unsign_3nh.tdf ;
+; db/alt_u_div_q9f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/alt_u_div_q9f.tdf       ;
+; db/lpm_divide_vim.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/lpm_divide_vim.tdf      ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/sign_div_unsign_nlh.tdf ;
+; db/alt_u_div_27f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/diogo.trevisan/Documents/AP9/processor/db/alt_u_div_27f.tdf       ;
++----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -292,16 +292,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 3,282                    ;
+; Estimated Total logic elements              ; 3,375                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 3045                     ;
+; Total combinational functions               ; 3138                     ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 1548                     ;
+;     -- 4 input functions                    ; 1646                     ;
 ;     -- 3 input functions                    ; 976                      ;
-;     -- <=2 input functions                  ; 521                      ;
+;     -- <=2 input functions                  ; 516                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 2297                     ;
+;     -- normal mode                          ; 2390                     ;
 ;     -- arithmetic mode                      ; 748                      ;
 ;                                             ;                          ;
 ; Total registers                             ; 710                      ;
@@ -313,8 +313,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 2                        ;
 ; Maximum fan-out node                        ; clock_divider:U5|reg1Mhz ;
 ; Maximum fan-out                             ; 415                      ;
-; Total fan-out                               ; 15950                    ;
-; Average fan-out                             ; 3.92                     ;
+; Total fan-out                               ; 16332                    ;
+; Average fan-out                             ; 3.93                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -323,7 +323,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Library Name ;
 +-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |kit                                            ; 3045 (1)          ; 710 (0)      ; 1470464     ; 2            ; 0       ; 1         ; 57   ; 0            ; |kit                                                                                                                                                        ;              ;
+; |kit                                            ; 3138 (1)          ; 710 (0)      ; 1470464     ; 2            ; 0       ; 1         ; 57   ; 0            ; |kit                                                                                                                                                        ;              ;
 ;    |RAM:U2|                                     ; 96 (0)            ; 6 (0)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|RAM:U2                                                                                                                                                 ;              ;
 ;       |altsyncram:altsyncram_component|         ; 96 (0)            ; 6 (0)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|RAM:U2|altsyncram:altsyncram_component                                                                                                                 ;              ;
 ;          |altsyncram_rgr3:auto_generated|       ; 96 (0)            ; 6 (6)        ; 1048576     ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|RAM:U2|altsyncram:altsyncram_component|altsyncram_rgr3:auto_generated                                                                                  ;              ;
@@ -331,8 +331,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |decode_rsa:decode3|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|RAM:U2|altsyncram:altsyncram_component|altsyncram_rgr3:auto_generated|decode_rsa:decode3                                                               ;              ;
 ;             |mux_qob:mux2|                      ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|RAM:U2|altsyncram:altsyncram_component|altsyncram_rgr3:auto_generated|mux_qob:mux2                                                                     ;              ;
 ;    |clock_divider:U5|                           ; 39 (39)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|clock_divider:U5                                                                                                                                       ;              ;
-;    |cpu_v32_5:U1|                               ; 2219 (0)          ; 414 (0)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |kit|cpu_v32_5:U1                                                                                                                                           ;              ;
-;       |alu_v32_5:alu_v_dut|                     ; 1391 (839)        ; 91 (91)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut                                                                                                                       ;              ;
+;    |cpu_v32_5:U1|                               ; 2312 (0)          ; 414 (0)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |kit|cpu_v32_5:U1                                                                                                                                           ;              ;
+;       |alu_v32_5:alu_v_dut|                     ; 1392 (840)        ; 91 (91)      ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut                                                                                                                       ;              ;
 ;          |lpm_divide:Div0|                      ; 270 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|lpm_divide:Div0                                                                                                       ;              ;
 ;             |lpm_divide_lkm:auto_generated|     ; 270 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|lpm_divide:Div0|lpm_divide_lkm:auto_generated                                                                         ;              ;
 ;                |sign_div_unsign_dnh:divider|    ; 270 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|lpm_divide:Div0|lpm_divide_lkm:auto_generated|sign_div_unsign_dnh:divider                                             ;              ;
@@ -344,7 +344,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                      |add_sub_8pc:add_sub_1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|lpm_divide:Mod0|lpm_divide_ocm:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_eaf:divider|add_sub_8pc:add_sub_1 ;              ;
 ;          |lpm_mult:Mult0|                       ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|lpm_mult:Mult0                                                                                                        ;              ;
 ;             |mult_7dt:auto_generated|           ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                ;              ;
-;       |control_unit_v:control_v_dut|            ; 828 (828)         ; 323 (323)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut                                                                                                              ;              ;
+;       |control_unit_v:control_v_dut|            ; 920 (920)         ; 323 (323)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut                                                                                                              ;              ;
 ;    |ps2_keyboard:U3|                            ; 125 (0)           ; 38 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|ps2_keyboard:U3                                                                                                                                        ;              ;
 ;       |dec_keyboard:U2|                         ; 113 (113)         ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|ps2_keyboard:U3|dec_keyboard:U2                                                                                                                        ;              ;
 ;       |keyboard:U1|                             ; 12 (12)           ; 24 (24)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kit|ps2_keyboard:U3|keyboard:U1                                                                                                                            ;              ;
@@ -437,22 +437,22 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 The IP Core highlighted in red is outdated. Regenerate the outdated IP with the current version of the Quartus II software and the MegaWizard interface.
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                          ; IP Include File                                           ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------------------------------------------------+
-; Altera ; RAM: 1-PORT  ; 13.1    ; N/A          ; N/A          ; |kit|RAM:U2                                              ; C:/Users/diogo.trevisan/Desktop/processor/RAM.vhd         ;
-; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff0:inst  ; C:/Users/diogo.trevisan/Desktop/processor/lpm_dff0.vhd    ;
-; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff0:inst1 ; C:/Users/diogo.trevisan/Desktop/processor/lpm_dff0.vhd    ;
-; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff2:inst2 ; C:/Users/diogo.trevisan/Desktop/processor/lpm_dff2.vhd    ;
-; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff2:inst3 ; C:/Users/diogo.trevisan/Desktop/processor/lpm_dff2.vhd    ;
-; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff2:inst4 ; C:/Users/diogo.trevisan/Desktop/processor/lpm_dff2.vhd    ;
-; Altera ; FIFO         ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|fifo0:inst7                       ; C:/Users/diogo.trevisan/Desktop/processor/fifo0.vhd       ;
-; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|lpm_ram_dq0:inst3                 ; C:/Users/diogo.trevisan/Desktop/processor/lpm_ram_dq0.vhd ;
-; Altera ; LPM_RAM_DQ   ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|lpm_ram_dq1:inst2                 ; C:/Users/diogo.trevisan/Desktop/processor/lpm_ram_dq1.vhd ;
-; Altera ; ROM: 1-PORT  ; 10.1    ; N/A          ; N/A          ; |kit|vga:U4|lpm_rom0:U5                                  ; C:/Users/diogo.trevisan/Desktop/processor/lpm_rom0.vhd    ;
-+--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                          ; IP Include File                                                 ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------------------------------------------------------+
+; Altera ; RAM: 1-PORT  ; 13.1    ; N/A          ; N/A          ; |kit|RAM:U2                                              ; C:/Users/diogo.trevisan/Documents/AP9/processor/RAM.vhd         ;
+; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff0:inst  ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_dff0.vhd    ;
+; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff0:inst1 ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_dff0.vhd    ;
+; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff2:inst2 ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_dff2.vhd    ;
+; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff2:inst3 ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_dff2.vhd    ;
+; Altera ; LPM_FF       ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|VIDEO_FILTER:inst8|lpm_dff2:inst4 ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_dff2.vhd    ;
+; Altera ; FIFO         ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|fifo0:inst7                       ; C:/Users/diogo.trevisan/Documents/AP9/processor/fifo0.vhd       ;
+; Altera ; RAM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|lpm_ram_dq0:inst3                 ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_ram_dq0.vhd ;
+; Altera ; LPM_RAM_DQ   ; N/A     ; N/A          ; N/A          ; |kit|vga:U4|VGA_MOD:U4|lpm_ram_dq1:inst2                 ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_ram_dq1.vhd ;
+; Altera ; ROM: 1-PORT  ; 10.1    ; N/A          ; N/A          ; |kit|vga:U4|lpm_rom0:U5                                  ; C:/Users/diogo.trevisan/Documents/AP9/processor/lpm_rom0.vhd    ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -502,7 +502,7 @@ The IP Core highlighted in red is outdated. Regenerate the outdated IP with the 
 +-------------------------------------------------------------+---------+
 ; clock_divider:U5|reg25Mhz                                   ; 156     ;
 ; clock_divider:U5|reg1Mhz                                    ; 415     ;
-; cpu_v32_5:U1|control_unit_v:control_v_dut|definingVariables ; 75      ;
+; cpu_v32_5:U1|control_unit_v:control_v_dut|definingVariables ; 80      ;
 ; cpu_v32_5:U1|control_unit_v:control_v_dut|SP[2]             ; 4       ;
 ; cpu_v32_5:U1|control_unit_v:control_v_dut|SP[3]             ; 4       ;
 ; cpu_v32_5:U1|control_unit_v:control_v_dut|SP[4]             ; 4       ;
@@ -543,29 +543,29 @@ The IP Core highlighted in red is outdated. Regenerate the outdated IP with the 
 ; 6:1                ; 16 bits   ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|FR_out_at_control[5]                        ;                            ;
 ; 18:1               ; 4 bits    ; 48 LEs        ; 4 LEs                ; 44 LEs                 ; |kit|vga:U4|TEXT_DRAWER:U3|LNCNT[2]                                                        ;                            ;
 ; 20:1               ; 2 bits    ; 26 LEs        ; 6 LEs                ; 20 LEs                 ; |kit|vga:U4|TEXT_DRAWER:U3|STATE[1]                                                        ;                            ;
-; 25:1               ; 6 bits    ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|opcode[0]                                   ;                            ;
+; 55:1               ; 6 bits    ; 216 LEs       ; 0 LEs                ; 216 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|opcode[0]                                   ;                            ;
 ; 66:1               ; 14 bits   ; 616 LEs       ; 28 LEs               ; 588 LEs                ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|temp[31]                                             ;                            ;
 ; 10:1               ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|bus_RAM_DATA_OUT[6]                         ;                            ;
 ; 69:1               ; 3 bits    ; 138 LEs       ; 6 LEs                ; 132 LEs                ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|FR_out[13]                                           ;                            ;
 ; 68:1               ; 17 bits   ; 765 LEs       ; 51 LEs               ; 714 LEs                ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|temp[1]                                              ;                            ;
 ; 263:1              ; 8 bits    ; 1400 LEs      ; 16 LEs               ; 1384 LEs               ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|bus_vga_char[2]                             ;                            ;
 ; 263:1              ; 8 bits    ; 1400 LEs      ; 24 LEs               ; 1376 LEs               ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|bus_vga_char[8]                             ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[7][12]                                   ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[7][1]                                    ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[6][14]                                   ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[6][6]                                    ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[5][10]                                   ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[5][1]                                    ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[4][12]                                   ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[4][6]                                    ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[2][12]                                   ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[2][0]                                    ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[0][11]                                   ;                            ;
-; 65:1               ; 8 bits    ; 344 LEs       ; 24 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[0][1]                                    ;                            ;
-; 67:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[3][8]                                    ;                            ;
-; 67:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[3][4]                                    ;                            ;
-; 67:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[1][8]                                    ;                            ;
-; 67:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[1][3]                                    ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[7][12]                                   ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[7][1]                                    ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[6][14]                                   ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[6][6]                                    ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[5][10]                                   ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[5][1]                                    ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[4][12]                                   ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[4][6]                                    ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[2][12]                                   ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[2][0]                                    ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[0][11]                                   ;                            ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 24 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[0][1]                                    ;                            ;
+; 66:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[3][8]                                    ;                            ;
+; 66:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[3][4]                                    ;                            ;
+; 66:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[1][8]                                    ;                            ;
+; 66:1               ; 8 bits    ; 352 LEs       ; 32 LEs               ; 320 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|Rn[1][3]                                    ;                            ;
 ; 39:1               ; 3 bits    ; 78 LEs        ; 6 LEs                ; 72 LEs                 ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|SP[1]                                       ;                            ;
 ; 86:1               ; 8 bits    ; 456 LEs       ; 72 LEs               ; 384 LEs                ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|m2[15]                                               ;                            ;
 ; 87:1               ; 4 bits    ; 232 LEs       ; 40 LEs               ; 192 LEs                ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|m2[7]                                                ;                            ;
@@ -573,9 +573,9 @@ The IP Core highlighted in red is outdated. Regenerate the outdated IP with the 
 ; 91:1               ; 16 bits   ; 960 LEs       ; 48 LEs               ; 912 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|bus_RAM_ADDRESS[12]                         ;                            ;
 ; 63:1               ; 16 bits   ; 672 LEs       ; 32 LEs               ; 640 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|PC[3]                                       ;                            ;
 ; 3:1                ; 6 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; |kit|vga:U4|TEXT_DRAWER:U3|PREVXPOS[5]                                                     ;                            ;
-; 25:1               ; 16 bits   ; 256 LEs       ; 16 LEs               ; 240 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|m3[6]                                       ;                            ;
-; 35:1               ; 12 bits   ; 276 LEs       ; 72 LEs               ; 204 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|m4[4]                                       ;                            ;
-; 36:1               ; 4 bits    ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|m4[1]                                       ;                            ;
+; 55:1               ; 16 bits   ; 576 LEs       ; 16 LEs               ; 560 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|m3[6]                                       ;                            ;
+; 65:1               ; 12 bits   ; 516 LEs       ; 72 LEs               ; 444 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|m4[4]                                       ;                            ;
+; 66:1               ; 4 bits    ; 176 LEs       ; 24 LEs               ; 152 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|m4[1]                                       ;                            ;
 ; 39:1               ; 13 bits   ; 338 LEs       ; 26 LEs               ; 312 LEs                ; |kit|cpu_v32_5:U1|control_unit_v:control_v_dut|SP[10]                                      ;                            ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|ShiftLeft0                                           ;                            ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; |kit|cpu_v32_5:U1|alu_v32_5:alu_v_dut|ShiftLeft0                                           ;                            ;
@@ -1268,7 +1268,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:38     ;
+; Top            ; 00:00:40     ;
 +----------------+--------------+
 
 
@@ -1278,7 +1278,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Mar 17 15:30:28 2017
+    Info: Processing started: Fri Mar 17 16:11:30 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AP9 -c AP9
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file alu_v32_5.v
@@ -1409,6 +1409,7 @@ Info (12133): Instantiated megafunction "RAM:U2|altsyncram:altsyncram_component"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rgr3.tdf
     Info (12023): Found entity 1: altsyncram_rgr3
 Info (12128): Elaborating entity "altsyncram_rgr3" for hierarchy "RAM:U2|altsyncram:altsyncram_component|altsyncram_rgr3:auto_generated"
+Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (32768) in the Memory Initialization File "C:/Users/diogo.trevisan/Documents/AP9/processor/cpuram.mif" -- setting initial value for remaining addresses to 0
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rsa.tdf
     Info (12023): Found entity 1: decode_rsa
 Info (12128): Elaborating entity "decode_rsa" for hierarchy "RAM:U2|altsyncram:altsyncram_component|altsyncram_rgr3:auto_generated|decode_rsa:decode3"
@@ -1688,28 +1689,28 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK_N" is stuck at VCC
 Info (17049): 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
     Info (17050): Register "cpu_v32_5:U1|control_unit_v:control_v_dut|flagToShifthAndRot[0]" lost all its fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/diogo.trevisan/Desktop/processor/AP9.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/diogo.trevisan/Documents/AP9/processor/AP9.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]"
     Warning (15610): No output dependent on input pin "KEY[2]"
     Warning (15610): No output dependent on input pin "KEY[3]"
-Info (21057): Implemented 3649 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3742 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 50 output pins
-    Info (21061): Implemented 3393 logic cells
+    Info (21061): Implemented 3486 logic cells
     Info (21064): Implemented 197 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 23 warnings
-    Info: Peak virtual memory: 342 megabytes
-    Info: Processing ended: Fri Mar 17 15:31:16 2017
-    Info: Elapsed time: 00:00:48
-    Info: Total CPU time (on all processors): 00:00:46
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 355 megabytes
+    Info: Processing ended: Fri Mar 17 16:12:20 2017
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:00:48
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/diogo.trevisan/Desktop/processor/AP9.map.smsg.
+The suppressed messages can be found in C:/Users/diogo.trevisan/Documents/AP9/processor/AP9.map.smsg.
 
 

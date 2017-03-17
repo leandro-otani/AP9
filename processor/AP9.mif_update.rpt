@@ -1,6 +1,6 @@
 MIF/HEX Update report for AP9
-Wed Mar 15 15:46:40 2017
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Fri Mar 17 16:03:15 2017
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
 
 
 ---------------------
@@ -16,7 +16,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2013 Altera Corporation
+Copyright (C) 1991-2011 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -35,7 +35,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Wed Mar 15 15:46:40 2017 ;
+; MIF/HEX Update Status ; Successful - Fri Mar 17 16:03:15 2017 ;
 ; Revision Name         ; AP9                                   ;
 ; Top-level Entity Name ; kit                                   ;
 ; Family                ; Cyclone IV E                          ;
@@ -43,36 +43,36 @@ applicable agreement for further details.
 +-----------------------+---------------------------------------+
 
 
-+---------------------------------------------------------+
-; MIF/HEX Update Processed Files                          ;
-+---------------------------------------------------------+
-; File Name                                               ;
-+---------------------------------------------------------+
-; C:/Users/Mario/Documents/AP9/ambientTest/charmap.mif    ;
-; C:/Users/Mario/Documents/AP9/ambientTest/cpuram.mif     ;
-; C:/Users/Mario/Documents/AP9/ambientTest/video_mem1.mif ;
-; C:/Users/Mario/Documents/AP9/ambientTest/video_mem2.mif ;
-+---------------------------------------------------------+
++----------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                 ;
++----------------------------------------------------------------+
+; File Name                                                      ;
++----------------------------------------------------------------+
+; C:/Users/diogo.trevisan/Documents/AP9/processor/charmap.mif    ;
+; C:/Users/diogo.trevisan/Documents/AP9/processor/cpuram.mif     ;
+; C:/Users/diogo.trevisan/Documents/AP9/processor/video_mem1.mif ;
+; C:/Users/diogo.trevisan/Documents/AP9/processor/video_mem2.mif ;
++----------------------------------------------------------------+
 
 
 +-------------------------+
 ; MIF/HEX Update Messages ;
 +-------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit MIF/HEX Update
-    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed Mar 15 15:46:37 2017
+Info: Running Quartus II 32-bit MIF/HEX Update
+    Info: Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Mar 17 16:03:09 2017
 Info: Command: quartus_cdb AP9 -c AP9 --update_mif
-Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (32768) in the Memory Initialization File "C:/Users/Mario/Documents/AP9/ambientTest/cpuram.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (32768) in the Memory Initialization File "C:/Users/diogo.trevisan/Documents/AP9/processor/cpuram.mif" -- setting initial value for remaining addresses to 0
 Info (39024): Processed the following Memory Initialization File(s)
-    Info (39025): Processed Memory Initialization File C:/Users/Mario/Documents/AP9/ambientTest/charmap.mif
-    Info (39025): Processed Memory Initialization File C:/Users/Mario/Documents/AP9/ambientTest/cpuram.mif
-    Info (39025): Processed Memory Initialization File C:/Users/Mario/Documents/AP9/ambientTest/video_mem1.mif
-    Info (39025): Processed Memory Initialization File C:/Users/Mario/Documents/AP9/ambientTest/video_mem2.mif
-Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 533 megabytes
-    Info: Processing ended: Wed Mar 15 15:46:40 2017
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (39025): Processed Memory Initialization File C:/Users/diogo.trevisan/Documents/AP9/processor/charmap.mif
+    Info (39025): Processed Memory Initialization File C:/Users/diogo.trevisan/Documents/AP9/processor/cpuram.mif
+    Info (39025): Processed Memory Initialization File C:/Users/diogo.trevisan/Documents/AP9/processor/video_mem1.mif
+    Info (39025): Processed Memory Initialization File C:/Users/diogo.trevisan/Documents/AP9/processor/video_mem2.mif
+Info: Quartus II 32-bit MIF/HEX Update was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 289 megabytes
+    Info: Processing ended: Fri Mar 17 16:03:15 2017
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:05
 
 

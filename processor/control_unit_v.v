@@ -300,6 +300,24 @@ module  control_unit_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,
                     end
                   endcase
               end
+				  16'b011101??????????: begin
+                 //`instructions_add32_and_addc;=======================
+                 casex(stage)
+                   8'h01: begin
+                      m3=Rn[IR[6:4]];
+                      m4=Rn[IR[3:1]];
+                      enable_alu=1'b1;
+                      useCarry=IR[0];
+                      opcode=IR[15:10];
+                   end
+                   8'h06: begin
+                      Rn[IR[9:7]]=m2;
+                      enable_alu=1'b0;
+                      processing_instruction=1'b0;
+                      resetStage=1'b1;
+                   end
+                  endcase
+              end 
               16'b100000??????????: begin
                  //`instructions_add_and_addc;=======================
                  casex(stage)
