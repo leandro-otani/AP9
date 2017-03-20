@@ -1,6 +1,6 @@
 Flow report for AP9
-Fri Mar 17 17:08:48 2017
-Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+Mon Mar 20 16:26:37 2017
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -13,13 +13,15 @@ Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Editio
   5. Flow Elapsed Time
   6. Flow OS Summary
   7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2011 Altera Corporation
+Copyright (C) 1991-2013 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -35,26 +37,26 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------------+
-; Flow Summary                                                                       ;
-+------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 17 17:08:48 2017         ;
-; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
-; Revision Name                      ; AP9                                           ;
-; Top-level Entity Name              ; kit                                           ;
-; Family                             ; Cyclone IV E                                  ;
-; Device                             ; EP4CE115F29C7                                 ;
-; Timing Models                      ; Final                                         ;
-; Total logic elements               ; 5,286 / 114,480 ( 5 % )                       ;
-;     Total combinational functions  ; 5,192 / 114,480 ( 5 % )                       ;
-;     Dedicated logic registers      ; 728 / 114,480 ( < 1 % )                       ;
-; Total registers                    ; 728                                           ;
-; Total pins                         ; 57 / 529 ( 11 % )                             ;
-; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 1,470,464 / 3,981,312 ( 37 % )                ;
-; Embedded Multiplier 9-bit elements ; 2 / 532 ( < 1 % )                             ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
-+------------------------------------+-----------------------------------------------+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Mon Mar 20 16:26:37 2017      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; AP9                                        ;
+; Top-level Entity Name              ; kit                                        ;
+; Family                             ; Cyclone IV E                               ;
+; Device                             ; EP4CE115F29C7                              ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 6,033 / 114,480 ( 5 % )                    ;
+;     Total combinational functions  ; 5,881 / 114,480 ( 5 % )                    ;
+;     Dedicated logic registers      ; 933 / 114,480 ( < 1 % )                    ;
+; Total registers                    ; 933                                        ;
+; Total pins                         ; 57 / 529 ( 11 % )                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 1,470,464 / 3,981,312 ( 37 % )             ;
+; Embedded Multiplier 9-bit elements ; 8 / 532 ( 2 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
++------------------------------------+--------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/17/2017 17:05:58 ;
+; Start date & time ; 03/20/2017 16:22:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AP9                 ;
 +-------------------+---------------------+
@@ -74,7 +76,7 @@ applicable agreement for further details.
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id      ;
 +--------------------------------------+---------------------------------------+---------------+-------------+-----------------+
 ; BLOCK_DESIGN_NAMING                  ; QuartusII                             ; Auto          ; --          ; --              ;
-; COMPILER_SIGNATURE_ID                ; 66290980669794.148978115705376        ; --            ; --          ; --              ;
+; COMPILER_SIGNATURE_ID                ; 167451665925185.149003774302284       ; --            ; --          ; --              ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; ramWithClock_tb ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; ramWithClock_tb                       ; --            ; --          ; eda_simulation  ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                  ; --            ; --          ; eda_simulation  ;
@@ -110,12 +112,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:00     ; 1.0                     ; 371 MB              ; 00:00:59                           ;
-; Fitter                    ; 00:00:46     ; 1.0                     ; 517 MB              ; 00:00:45                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 510 MB              ; 00:00:10                           ;
-; TimeQuest Timing Analyzer ; 00:00:45     ; 1.0                     ; 473 MB              ; 00:00:44                           ;
-; EDA Netlist Writer        ; 00:00:16     ; 1.0                     ; 302 MB              ; 00:00:14                           ;
-; Total                     ; 00:02:58     ; --                      ; --                  ; 00:02:52                           ;
+; Analysis & Synthesis      ; 00:00:58     ; 1.0                     ; 613 MB              ; 00:00:57                           ;
+; Fitter                    ; 00:02:14     ; 1.0                     ; 1058 MB             ; 00:02:13                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 491 MB              ; 00:00:07                           ;
+; TimeQuest Timing Analyzer ; 00:00:33     ; 1.0                     ; 640 MB              ; 00:00:33                           ;
+; EDA Netlist Writer        ; 00:00:11     ; 1.0                     ; 496 MB              ; 00:00:11                           ;
+; Total                     ; 00:04:03     ; --                      ; --                  ; 00:04:01                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -124,11 +126,11 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; L410A1-038411    ; Windows 7 ; 6.1        ; i686           ;
-; Fitter                    ; L410A1-038411    ; Windows 7 ; 6.1        ; i686           ;
-; Assembler                 ; L410A1-038411    ; Windows 7 ; 6.1        ; i686           ;
-; TimeQuest Timing Analyzer ; L410A1-038411    ; Windows 7 ; 6.1        ; i686           ;
-; EDA Netlist Writer        ; L410A1-038411    ; Windows 7 ; 6.1        ; i686           ;
+; Analysis & Synthesis      ; china-PC         ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; china-PC         ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; china-PC         ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; china-PC         ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer        ; china-PC         ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

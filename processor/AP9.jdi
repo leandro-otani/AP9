@@ -1,8 +1,8 @@
 <sld_project_info>
+  <project>
+    <hash md5_digest_80b="5f5b918bca0ead0c84a6"/>
+  </project>
   <file_info>
-    <file checksum="0x00D7918B" device="EP4CE115F29C7" path="AP9.sof" usercode="0xFFFFFFFF"/>
-    <file checksum="0x7020CC48" device="EPCS64" path="AP9.pof" usercode="0x00000000"/>
+    <file device="EP4CE115F29C7" path="AP9.sof" usercode="0xFFFFFFFF"/>
   </file_info>
-  <hub_info ir_width="0" node_count="0"/>
-  <node_info/>
 </sld_project_info>

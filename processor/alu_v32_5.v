@@ -335,21 +335,21 @@ module alu_v32_5(wire_clock,enable_alu, m2, m3, m4,opCode,FR_in,FR_out,useCarry,
 			  casex(stage)
 				8'h01: begin 
                    if(useCarry==1'b1) begin
-                      temp=32'h00000000+m3+m4+FR_in[11];                    
+                      temp=64'h00000000+m3+m4+FR_in[11]; //from 32 to 64                    
                    end    
                    else  begin
-                      temp=32'h00000000+m3+m4;                    
+                      temp=64'h00000000+m3+m4; //from 32 to 64                   
                    end
                 end
                 8'h02: begin
-                   if(temp>32'h0000ffff) begin
+                   if(temp>64'h0000ffff) begin  //from 32 to 64
                       FR_out[11]=1'b1;                    
                    end
                    else begin
                       FR_out[11]=1'b0;
                    end
-                   m2=temp[15:0];
-                   if(temp[15:0]==16'h0000) begin
+                   m2=temp[31:0];  //from 16 to 32
+                   if(temp[31:0]==32'h0000) begin  //from 16 to 32
                       FR_out[12]=1'b1;
                    end
                    else begin

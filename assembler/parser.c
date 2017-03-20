@@ -13,7 +13,8 @@ int curr_pos = 0; /* Posicao atual */
 int curr_line = 0; /* Linha atual */
 char * progr_buffer; /* String completa do programa */
 
-char progr_buffer_out[MEM_SIZE][17]; /* Buffer de saida */
+///DIOGO
+char progr_buffer_out[MEM_SIZE][32]; /* Buffer de saida */
 
 int CarregaPrograma(char *nome)
 {
@@ -290,6 +291,18 @@ void parser_Write_Inst(char word[17], unsigned int end)
 //    printf("Escrito : %.16s em 0x%x\n",word,end);
 }
 
+void parser_Write_Inst32(char word[33], unsigned int end)
+{
+    /*
+    fprintf(out,"%d:%.16s;\n",end,word);
+    */
+    if(end >= MEM_SIZE) {
+        parser_Abort("Limite da memoria ultrapassado!");
+    }
+    strcpy(progr_buffer_out[end],word);
+//    printf("Escrito : %.16s em 0x%x\n",word,end);
+}
+
 void parser_str_to_upper(char * str)
 {
     register unsigned int i = 0;
@@ -301,19 +314,21 @@ void parser_str_to_upper(char * str)
 }
 
 /* Inicializa buffer de saida */
-void parser_init_out_buffer(void) 
+void parser_init_out_buffer(void)
 {
     int i;
-  
+
     for(i = 0; i < MEM_SIZE; i++)
-        strcpy(progr_buffer_out[i],"0000000000000000");   
+        strcpy(progr_buffer_out[i],"0000000000000000");
 }
 
 /* Descarrega buffer de saida no arquivo */
-void parser_flush_program(void) 
+void parser_flush_program(void)
 {
     int i;
-    
+
     for(i = 0; i < MEM_SIZE; i++)
-        fprintf(out,"%d:%.16s;\n",i,progr_buffer_out[i]);
+        //fprintf(out,"%d:%.16s;\n",i,progr_buffer_out[i]);
+        //DIOGO
+        fprintf(out,"%d:%s;\n",i,progr_buffer_out[i]);
 }

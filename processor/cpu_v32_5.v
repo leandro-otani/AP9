@@ -1,9 +1,9 @@
 module  cpu_v32_5(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,bus_RAM_ADDRESS,wire_RW, bus_keyboard, videoflag, bus_vga_pos, bus_vga_char,data_debug, led);
    input wire         wire_clock;
    input wire         wire_reset;
-   input wire [15:0]  bus_RAM_DATA_IN;
-   output wire [15:0]  bus_RAM_DATA_OUT;
-   output wire [15:0]  bus_RAM_ADDRESS;
+   input wire [31:0]  bus_RAM_DATA_IN; //from 16 to 32
+   output wire [31:0]  bus_RAM_DATA_OUT; //from 16 to 32
+   output wire [31:0]  bus_RAM_ADDRESS; //from 16 to 32
    output wire         wire_RW;
    input  wire [7:0]  bus_keyboard;
    output wire         videoflag;
@@ -13,9 +13,9 @@ module  cpu_v32_5(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,bus_R
    output wire [15:0]  led;
 
     
-   wire [15:0]         m2;             
-   wire [15:0]         m3;
-   wire [15:0]         m4;
+   wire [31:0]         m2;             
+   wire [31:0]         m3;
+   wire [31:0]         m4;
    
    
    wire                enable_alu;      

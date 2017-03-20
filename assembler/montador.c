@@ -87,6 +87,7 @@ void DetectarLabels(void)
     char * str_tmp;
     char * str_tmp1;
     char str_msg[STRTAM];
+    //char str_msg32[STRTAM32]; //32 bits version instruction
     unsigned short end_cnt = 0;
     int op_code = 0;
     unsigned short aux = 0;
@@ -624,11 +625,12 @@ void MontarInstrucoes(void)
                     str_tmp1 = ConverteRegistrador(val1);
                     str_tmp2 = ConverteRegistrador(val2);
                     str_tmp3 = ConverteRegistrador(val3);
-                    sprintf(str_msg,"%s%s%s%s0",ADD32,str_tmp1,str_tmp2,str_tmp3);
+                    sprintf(str_msg,"%s00%s00%s00%s000000000",ADD32,str_tmp1,str_tmp2,str_tmp3);
+
                     free(str_tmp1);
                     free(str_tmp2);
                     free(str_tmp3);
-                    parser_Write_Inst(str_msg,end_cnt);
+                    parser_Write_Inst32(str_msg,end_cnt);
                     end_cnt += 1;
                     break;
 

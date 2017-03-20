@@ -1,9 +1,9 @@
 module  control_unit_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,bus_RAM_ADDRESS,wire_RW, bus_keyboard, videoflag, bus_vga_pos, bus_vga_char,enable_alu,FR_in_at_control,FR_out_at_control,opcode,useCarry,flagToShifthAndRot,useDec,m2,m3,m4,data_debug, led);
    input wire         wire_clock;
    input wire         wire_reset;
-   input wire [15:0]  bus_RAM_DATA_IN;
-   output reg [15:0]  bus_RAM_DATA_OUT;
-   output reg [15:0]  bus_RAM_ADDRESS;
+   input wire [31:0]  bus_RAM_DATA_IN; //from 16 to 32
+   output reg [31:0]  bus_RAM_DATA_OUT; //from 16 to 32
+   output reg [31:0]  bus_RAM_ADDRESS; //from 16 to 32
    output reg         wire_RW;
    input  wire [7:0]  bus_keyboard;
    output reg         videoflag;
@@ -744,18 +744,18 @@ module  control_unit_v(wire_clock, wire_reset, bus_RAM_DATA_IN,bus_RAM_DATA_OUT,
                    end 
                  endcase
               end
-				  16'b011101??????????: begin
+				  32'b011101??????????????????????????: begin
                  //`instructions_add32_and_addc;=======================
                  casex(stage)
                    8'h01: begin
-                      m3=Rn[IR[6:4]];
-                      m4=Rn[IR[3:1]];
+                      m3=Rn[IR[25:21]];
+                      m4=Rn[IR[20:16]];
                       enable_alu=1'b1;
-                      useCarry=IR[0];
-                      opcode=IR[15:10];
+                      useCarry=IR[10];
+                      opcode=IR[31:26];
                    end
                    8'h06: begin
-                      Rn[IR[9:7]]=m2;
+                      Rn[IR[15:11]]=m2;
                       enable_alu=1'b0;
                       processing_instruction=1'b0;
                       resetStage=1'b1;
